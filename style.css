@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.last {
+	margin-right: 0 !important;
+}
+.divCol3 {
+	width: 23.5%;
+	float: left;
+	margin-right: 2%;
+}
+.divCol4 {
+	width: 32%;
+	float: left;
+	margin-right: 2%;
+}
+.divCol6 {
+	width: 49%;
+	float: left;
+	margin-right: 2%;
+}
+.divCol9 {
+	width: 74.5%;
+	float: left;
+	margin-right: 2%;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.Header, .section1, .section2, .section3, .footer, .sectionProizvodi, .kontakt, .usluge{
+    width: 1280px;
+    margin: 0 auto;
+}
+
+
+/*-------------------------Header start-------------------------*/
+.HeaderWrap{
+    background-color: rgb(137, 227, 144);
+    margin-bottom: 7%;
+}
+.Logo{
+    float: left;
+    margin-top: 2%;
+    color: rgba(0, 0, 0, 0.89);
+
+}
+.Izbornik{
+    float: right;
+    margin-bottom: 1%;
+}
+.Izbornik ul{
+    transform: translateY(-28px);
+    list-style-type: none;    
+    text-align: center;
+    margin-left: auto;
+}
+.Izbornik ul li{
+    display: inline-block;
+}
+.Izbornik ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    padding: 20px 20px;
+    margin-right: 2%;
+    color: rgba(0, 0, 0, 0.89);
+    border-radius: 20px;
+    font-weight: bold;
+}
+.Izbornik ul li a:hover{
+    background-color: darkgreen;
+    color: rgb(255, 254, 254);
+    border-radius: 20px;
+    transition: 1.5s;
+}
+/*-------------------------Header end-------------------------*/
+
+
+/*-------------------------Section1 start-------------------------*/
+.section1Wrap .section1 .o-nama h1{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.section1Wrap .section1 .o-nama p{
+    line-height: 1.5;
+    margin-bottom: 5%;
+    text-align: justify;
+}
+.section1Wrap .section1 .o-nama ul{
+    list-style-type: none;
+    line-height: 2;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.section1Wrap .section1 .slike {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    border-radius: 50%;
+    float: right;
+}
+.section1Wrap .section1 .slike img {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    float: right;
+}
+.section1Wrap .section1 .slike img.prikaz {
+    opacity: 1;
+}
+.section1Wrap{
+    margin-bottom: 7%;
+}
+/*-------------------------Section1 end-------------------------*/
+
+
+/*-------------------------Section2 start-------------------------*/
+.section2Wrap{
+    background-image: url(slike/bg-image.avif);
+    padding: 7%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section2Wrap .section2 .box1{
+    background-color: rgba(79, 250, 79, 0.2);
+    padding-bottom: 35px;
+}
+.section2Wrap .section2 .section2Podnaslov{
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+    background-color: rgba(79, 250, 79, 0.2);
+    transform: translateY(-50px);
+    color: rgba(0, 0, 0, 0.89);
+}
+.section2Wrap .section2 .box1 img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: 7%;
+    margin-left: 15%; 
+}
+.section2Wrap .section2 .box1:hover{
+    transform: translateY(-10%);
+    transition: all 0.5s;
+}
+.section2Wrap .section2 .box1 p{
+    line-height: 1.5;
+    text-align: justify;
+    margin-top: 5%;
+    padding: 20px;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+.section2Wrap .section2 .box1 a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.89);
+    padding: 20px;
+    margin: 15px;
+    background-color: rgb(137, 227, 144);
+    border-radius: 15px;
+    font-weight: bold;
+}
+.section2Wrap .section2 .box1 a:hover{
+    background-color: darkgreen;
+    color: rgb(255, 254, 254);
+    border-radius: 20px;
+    transition: 1s;
+}
+/*-------------------------Section2 end-------------------------*/
+
+
+/*-------------------------Section3 start-------------------------*/
+.section3Wrap{
+    background-image: url(slike/bg-image4.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10%;
+}
+.section3Wrap .section3 .box2 .img1{
+    width: 120px;
+    height: 130px;
+    margin-left: 80px;
+    margin-right: 30px;
+}
+.section3Wrap .section3 .box3{
+    float: right;
+    line-height: 1.5;
+    transform: translateY(-200px);
+    margin-right: 18%;
+    width: 500px;
+}
+.section3Wrap .section3 .box3 p{
+    margin-top: 4%;
+    line-height: 2;
+    text-align: justify;
+}
+.section3Wrap .section3 .box2 .img2{
+    width: 170px;
+    height: 170px;
+}
+.section3Wrap .section3 .box2 .img3{
+    width: 200px;
+    height: 200px;
+    margin-right: 30px;
+    transform: translateY(-10px);
+}
+.section3Wrap .section3 .box2 .img4{
+    width: 220px;
+    height: 250px;
+    transform: translateY(40px);
+}
+.section3Wrap .section3 .box2 .img1:hover{
+    transform: translateY(-50px);
+    transition: 0.5s ease-in-out;
+}
+.section3Wrap .section3 .box2 .img2:hover{
+    transform: translateY(-50px);
+    transition: 0.5s ease-in-out;
+}
+.section3Wrap .section3 .box2 .img3:hover{
+    transform: translateY(50px);
+    transition: 0.5s ease-in-out;
+}
+.section3Wrap .section3 .box2 .img4:hover{
+    transform: translateY(100px);
+    transition: 0.5s ease-in-out;
+}
+
+/*-------------------------Section3 end-------------------------*/
+
+
+/*-------------------------Footer start-------------------------*/
+.footerWrap{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    line-height: 2;
+    padding: 5%;
+}
+.footerWrap .footer h1 a{
+    text-decoration: none;
+    color: white;
+}
+.footerWrap .footer ul{
+    list-style-type: none;
+}
+.footerWrap .footer h4{
+    transform: translateX(-10px);
+
+}
+.footerWrap .footer h4 a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+}
+.footerWrap .footer h4 a:hover{
+    background-color: white;
+    color: black;
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    transition: 1s;
+}
+/*-------------------------Footer end-------------------------*/
+
+
+/*-------------------------Proizvodi start-------------------------*/
+.sectionProizvodiWrap{
+    margin-bottom: 5%;
+}
+.sectionProizvodiWrap .sectionProizvodi h1{
+    margin: 5% auto;  
+    width: 430px;  
+    padding: 10px 25px;
+    background-color: rgba(79, 250, 79, 0.2);
+    overflow: hidden;
+}
+.sectionProizvodiWrap .sectionProizvodi .boxProizvodi{
+    margin-bottom: 9%;
+    line-height: 1.5;
+}
+.sectionProizvodiWrap .sectionProizvodi .boxProizvodi img{
+    width: 530px;
+    height: 300px;
+    border-radius: 20px;
+}
+.sectionProizvodiWrap .sectionProizvodi .boxProizvodi h4{
+    margin: 2% 0;
+    font-size: 20px;
+}
+.sectionProizvodiWrap .sectionProizvodi .boxProizvodi p{
+    text-align: justify;
+    width: 530px;
+}
+/*-------------------------Proizvodi end-------------------------*/
+
+
+/*-------------------------Kontakt start-------------------------*/
+.kontaktWrap{
+    margin-bottom: 5%;
+}
+.kontaktWrap .kontakt .kontaktBox{
+    line-height: 2;
+    margin-bottom: 5%;
+}
+.kontaktWrap .kontakt .kontaktBox h4{
+    margin-bottom: 1%;
+    font-size: 20px;
+}
+.kontaktWrap .kontakt .mojaSlika{
+    margin-bottom: 5%;
+}
+.kontaktWrap .kontakt .mojaSlika img{
+    height: 500px;
+    width: 400px;
+    border-radius: 15px;
+    margin-left: 17%;
+}
+.kontaktWrap .kontakt .karta h4{
+    margin-bottom: 2%;
+    font-size: 20px;
+}
+/*-------------------------Kontakt end-------------------------*/
+
+
+/*-------------------------Usluge start-------------------------*/
+.uslugeWrap{
+    background-image: url(slike/bg-image3.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5% 0;
+    margin-bottom: 5%;
+}
+.uslugeWrap .usluge .uslugeNaslov h2{
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 30px;
+}
+.uslugeWrap .usluge .uslugebox1 {
+    margin-bottom: 3%;
+}
+.uslugeWrap .usluge .uslugebox1 h4{
+    margin-top: 5%;
+}
+.uslugeWrap .usluge .uslugebox1 img{
+    width: 325px;
+    height: 300px;
+    border-radius: 15px;
+}
+.uslugeWrap .usluge .uslugebox1 p{
+    margin: 2% 0;
+    line-height: 1.5;
+    text-align: justify;
+}
+/*-------------------------Usluge end-------------------------*/
