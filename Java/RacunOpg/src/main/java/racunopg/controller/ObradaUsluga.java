@@ -13,11 +13,11 @@ import racunopg.util.RacunOpgException;
  *
  * @author pc
  */
-public class ObradaUsluga extends Obrada<Usluga>{
+public class ObradaUsluga extends Obrada<Usluga> {
 
     @Override
     public List<Usluga> read() {
-         return session.createQuery("from Usluga", Usluga.class).list();
+        return session.createQuery("from Usluga", Usluga.class).list();
     }
 
     @Override
@@ -37,17 +37,16 @@ public class ObradaUsluga extends Obrada<Usluga>{
     }
 
     private void kontrolaNaziv() throws RacunOpgException {
-   if (entitet.getNaziv() == null || entitet.getNaziv().isEmpty()) {
+        if (entitet.getNaziv() == null || entitet.getNaziv().isEmpty()) {
             throw new RacunOpgException("Naziv usluge je obavezan");
         }
     }
 
     private void kontrolaCijenaPoHa() throws RacunOpgException {
-            BigDecimal cijenaPoHa = entitet.getCijenaPoHa();
+        BigDecimal cijenaPoHa = entitet.getCijenaPoHa();
         if (cijenaPoHa == null || cijenaPoHa.compareTo(BigDecimal.ZERO) <= 0) {
             throw new RacunOpgException("Cijena po hektaru mora biti veća od 0");
         }
     }
-    
-      
+
 }

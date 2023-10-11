@@ -14,26 +14,23 @@ import java.math.BigDecimal;
  *
  * @author pc
  */
-
 @Entity
-public class Usluga extends Entitet{
+public class Usluga extends Entitet {
 
-        
-	    private String naziv;
-            private BigDecimal cijenaPoHa; 
-            private BigDecimal kolicina; 
-            private String opis;
+    private String naziv;
+    private BigDecimal cijenaPoHa;
+    private BigDecimal kolicina;
+    private String opis;
 
     public Usluga() {
     }
 
-    public Usluga( String naziv, BigDecimal cijenaPoHa, BigDecimal kolicina, String opis) {
+    public Usluga(String naziv, BigDecimal cijenaPoHa, BigDecimal kolicina, String opis) {
         this.naziv = naziv;
         this.cijenaPoHa = cijenaPoHa;
         this.kolicina = kolicina;
         this.opis = opis;
     }
-
 
     public String getNaziv() {
         return naziv;
@@ -65,6 +62,11 @@ public class Usluga extends Entitet{
 
     public void setOpis(String opis) {
         this.opis = opis;
+    }
+
+    @Override
+    public String toString() {
+        return naziv;
     }
 
 }

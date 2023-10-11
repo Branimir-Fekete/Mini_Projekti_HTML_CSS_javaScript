@@ -18,36 +18,41 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
-public class Racun extends Entitet{
+public class Racun extends Entitet {
 
-        
-	private BigDecimal PDV;
-	private Date vrijemeIzdavanja;
-	private String opisPlacanja;
-        
-        @ManyToOne
-        private Kupac kupac;
+    private String nazivRacuna;
+    private BigDecimal PDV;
 
-        @ManyToOne
-        private Usluga usluga;
+    private Date vrijemeIzdavanja;
+    private String opisPlacanja;
 
-        @ManyToOne
-        private Proizvod proizvod;
-        
-        
+    @ManyToOne
+    private Kupac kupac;
 
-	public Racun() {
-	}
+    @ManyToOne
+    private Usluga usluga;
 
-	public Racun(BigDecimal PDV, Date vrijemeIzdavanja, String opisPlacanja, int kupacId, int uslugaId,
-		int proizvodId) {
-		this.PDV = PDV;
-		this.vrijemeIzdavanja = vrijemeIzdavanja;
-		this.opisPlacanja = opisPlacanja;
+    @ManyToOne
+    private Proizvod proizvod;
 
-	}
-        
-        
+    public Racun() {
+    }
+
+    public Racun(BigDecimal PDV, Date vrijemeIzdavanja, String opisPlacanja, int kupacId, int uslugaId,
+            int proizvodId) {
+        this.PDV = PDV;
+        this.vrijemeIzdavanja = vrijemeIzdavanja;
+        this.opisPlacanja = opisPlacanja;
+
+    }
+
+    public String getNazivRacuna() {
+        return nazivRacuna;
+    }
+
+    public void setNazivRacuna(String nazivRacuna) {
+        this.nazivRacuna = nazivRacuna;
+    }
 
     public BigDecimal getPDV() {
         return PDV;
@@ -97,5 +102,8 @@ public class Racun extends Entitet{
         this.proizvod = proizvod;
     }
 
-        
+    @Override
+    public String toString() {
+        return nazivRacuna;
+    }
 }

@@ -9,20 +9,22 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import java.math.BigDecimal;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  *
  * @author pc
  */
 @Entity
-public class Proizvod extends Entitet{
+public class Proizvod extends Entitet {
 
-
-        
-        private String naziv;
-        private BigDecimal cijena; // Promijenjeno u BigDecimal
-        private BigDecimal kolicina; // Promijenjeno u BigDecimal
-        private String opis;
+    private String naziv;
+    private BigDecimal cijena;
+    private BigDecimal kolicina;
+    private String opis;
 
     public Proizvod() {
     }
@@ -33,7 +35,6 @@ public class Proizvod extends Entitet{
         this.kolicina = kolicina;
         this.opis = opis;
     }
-
 
     public String getNaziv() {
         return naziv;
@@ -67,4 +68,8 @@ public class Proizvod extends Entitet{
         this.opis = opis;
     }
 
+    @Override
+    public String toString() {
+        return naziv;
+    }
 }

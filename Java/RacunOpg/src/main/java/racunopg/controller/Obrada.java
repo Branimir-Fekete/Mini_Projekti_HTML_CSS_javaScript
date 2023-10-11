@@ -14,58 +14,61 @@ import racunopg.util.RacunOpgException;
  *
  * @author pc
  */
-public abstract class Obrada<T extends Entitet>{
-    
+public abstract class Obrada<T extends Entitet> {
+
     protected T entitet;
     protected Session session;
+
     public abstract List<T> read();
+
     protected abstract void kontrolaUnos() throws RacunOpgException;
+
     protected abstract void kontrolaPromjena() throws RacunOpgException;
+
     protected abstract void kontrolaBrisanje() throws RacunOpgException;
-    
-    public Obrada(){
+
+    public Obrada() {
         session = HibernateUtil.getSession();
     }
-    
-    public Obrada(T entitet){
+
+    public Obrada(T entitet) {
         this();
-        this.entitet=entitet;
+        this.entitet = entitet;
     }
-    
-    public void create() throws RacunOpgException{
+
+    public void create() throws RacunOpgException {
         kontrolaNull();
         entitet.setSifra(null);
         kontrolaUnos();
         persist();
     }
-    
-    public void update() throws RacunOpgException{
+
+    public void update() throws RacunOpgException {
         kontrolaNull();
         kontrolaPromjena();
         persist();
     }
-    
-    public void delete() throws RacunOpgException{
+
+    public void delete() throws RacunOpgException {
         kontrolaNull();
         kontrolaBrisanje();
         session.beginTransaction();
         session.remove(entitet);
         session.getTransaction().commit();
     }
-    
-    private void persist(){
+
+    private void persist() {
         session.beginTransaction();
         session.persist(entitet);
         session.getTransaction().commit();
     }
-    
-    private void kontrolaNull() throws RacunOpgException{
-       if(entitet==null){
+
+    private void kontrolaNull() throws RacunOpgException {
+        if (entitet == null) {
             throw new RacunOpgException("Entitet je null");
-        } 
-       
+        }
+
     }
-    
 
     public T getEntitet() {
         return entitet;
@@ -74,12 +77,11 @@ public abstract class Obrada<T extends Entitet>{
     public void setEntitet(T entitet) {
         this.entitet = entitet;
     }
-    
-    
-    public void refresh(){
-        if(entitet!=null){
+
+    public void refresh() {
+        if (entitet != null) {
             session.refresh(entitet);
         }
     }
-   
+
 }

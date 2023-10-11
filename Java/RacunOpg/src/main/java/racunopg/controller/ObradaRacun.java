@@ -9,12 +9,11 @@ import java.util.List;
 import racunopg.model.Racun;
 import racunopg.util.RacunOpgException;
 
-
 /**
  *
  * @author pc
  */
-public class ObradaRacun extends Obrada<Racun>{
+public class ObradaRacun extends Obrada<Racun> {
 
     @Override
     public List<Racun> read() {
@@ -37,13 +36,13 @@ public class ObradaRacun extends Obrada<Racun>{
     protected void kontrolaBrisanje() throws RacunOpgException {
 
     }
-    
-      private void kontrolaPDV() throws RacunOpgException {
+
+    private void kontrolaPDV() throws RacunOpgException {
         if (entitet.getPDV() == null || entitet.getPDV().compareTo(BigDecimal.ZERO) < 0) {
             throw new RacunOpgException("PDV mora biti veći ili jednak nuli");
         }
     }
-    
+
     private void kontrolaVrijemeIzdavanja() throws RacunOpgException {
         if (entitet.getVrijemeIzdavanja() == null) {
             throw new RacunOpgException("Vrijeme izdavanja računa je obavezno");
@@ -55,6 +54,5 @@ public class ObradaRacun extends Obrada<Racun>{
             throw new RacunOpgException("Opis plaćanja je obavezan");
         }
     }
-    
-    
+
 }

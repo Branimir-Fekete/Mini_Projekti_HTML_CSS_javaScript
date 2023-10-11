@@ -13,51 +13,51 @@ import racunopg.util.RacunOpgException;
  *
  * @author pc
  */
-public class ObradaKupac extends Obrada<Kupac>{
+public class ObradaKupac extends Obrada<Kupac> {
 
     @Override
     public List<Kupac> read() {
-  
-        return session.createQuery("from Polaznik",Kupac.class).list();
-  
+
+        return session.createQuery("from Kupac", Kupac.class).list();
+
     }
 
     @Override
     protected void kontrolaUnos() throws RacunOpgException {
-      kontrolaNazivSubjekta();
-      kontrolaOIB();
-      kontrolaIBAN();
+        kontrolaNazivSubjekta();
+        kontrolaOIB();
+        kontrolaIBAN();
     }
 
     @Override
     protected void kontrolaPromjena() throws RacunOpgException {
-  
+
     }
 
     @Override
     protected void kontrolaBrisanje() throws RacunOpgException {
-   
+
     }
-    
-      private void kontrolaNazivSubjekta() throws RacunOpgException {
+
+    private void kontrolaNazivSubjekta() throws RacunOpgException {
         if (entitet.getNazivSubjekta() == null || entitet.getNazivSubjekta().isEmpty()) {
             throw new RacunOpgException("Naziv subjekta je obavezan");
         }
     }
-    
+
     protected void kontrolaOIB() throws RacunOpgException {
-       
-       if(!Alati.isValjanOIB(entitet.getOIB())){
-           throw new RacunOpgException("OIB nije valjan");
-       }  
+
+        if (!Alati.isValjanOIB(entitet.getOIB())) {
+            throw new RacunOpgException("OIB nije valjan");
+        }
 
     }
-    
+
     private void kontrolaIBAN() throws RacunOpgException {
-    String iban = entitet.getIBAN();
-    if (iban == null || iban.isEmpty()) {
-        throw new RacunOpgException("IBAN je obavezan");
+        String iban = entitet.getIBAN();
+        if (iban == null || iban.isEmpty()) {
+            throw new RacunOpgException("IBAN je obavezan");
+        }
     }
-  }
-    
+
 }

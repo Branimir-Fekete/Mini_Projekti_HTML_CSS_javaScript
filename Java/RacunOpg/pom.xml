@@ -28,12 +28,12 @@
             <version>3.2.0</version>
         </dependency>
             
-     <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
-    <dependency>
-        <groupId>org.hibernate.orm</groupId>
-        <artifactId>hibernate-core</artifactId>
-        <version>6.3.1.Final</version>
-    </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hibernate.orm/hibernate-core -->
+        <dependency>
+            <groupId>org.hibernate.orm</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>6.3.1.Final</version>
+        </dependency>
 
 
         <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
@@ -43,7 +43,7 @@
             <version>1.16.1</version>
         </dependency>
         
-                <!-- https://mvnrepository.com/artifact/us.codecraft/xsoup -->
+        <!-- https://mvnrepository.com/artifact/us.codecraft/xsoup -->
         <dependency>
             <groupId>us.codecraft</groupId>
             <artifactId>xsoup</artifactId>
@@ -62,6 +62,30 @@
             <groupId>de.mkammerer</groupId>
             <artifactId>argon2-jvm</artifactId>
             <version>2.11</version>
+        </dependency>
+        
+        <!-- https://mvnrepository.com/artifact/commons-validator/commons-validator -->
+        <dependency>
+            <groupId>commons-validator</groupId>
+            <artifactId>commons-validator</artifactId>
+            <version>1.7</version>
+        </dependency>
+
+
+        <!-- https://projectlombok.org/setup/maven -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+        
+        
+        <!-- https://mvnrepository.com/artifact/com.github.lgooddatepicker/LGoodDatePicker -->
+        <dependency>
+            <groupId>com.github.lgooddatepicker</groupId>
+            <artifactId>LGoodDatePicker</artifactId>
+            <version>11.2.1</version>
         </dependency>
         
     </dependencies>

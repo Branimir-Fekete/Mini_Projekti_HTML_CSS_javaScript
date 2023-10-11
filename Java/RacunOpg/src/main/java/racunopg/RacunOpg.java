@@ -41,10 +41,11 @@ public class RacunOpg {
         
         
         
-//          Provjera ručnog inserta            
+          //Provjera ručnog inserta            
 //        ObradaRacun or = new ObradaRacun();
 //        Racun r = new Racun();
 //        
+//            r.setNazivRacuna("1/11/2023");
 //            r.setOpisPlacanja("Neki opis znači lorem ipmsun");
 //            r.setPDV(new BigDecimal(25));
 //            r.setVrijemeIzdavanja(new Date());
