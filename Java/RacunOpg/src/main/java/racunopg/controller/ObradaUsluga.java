@@ -33,7 +33,7 @@ public class ObradaUsluga extends Obrada<Usluga> {
 
     @Override
     protected void kontrolaBrisanje() throws RacunOpgException {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+  
     }
 
     private void kontrolaNaziv() throws RacunOpgException {

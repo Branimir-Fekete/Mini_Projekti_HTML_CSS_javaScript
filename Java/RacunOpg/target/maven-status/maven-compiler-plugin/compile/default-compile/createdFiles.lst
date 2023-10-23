@@ -1,6 +1,7 @@
 racunopg\view\ProzorUsluga$1.class
 racunopg\view\Izbornik$3.class
 racunopg\view\ProzorProizvod$1.class
+racunopg\view\ProzorRacun$9.class
 racunopg\view\ProzorKupac$6.class
 racunopg\view\Izbornik$6.class
 racunopg\model\Kupac.class
@@ -27,6 +28,7 @@ racunopg\controller\ObradaRacun.class
 racunopg\view\ProzorUsluga$3.class
 racunopg\view\ProzorProizvod$4.class
 racunopg\view\ProzorKupac$4.class
+racunopg\view\ProzorRacun$10.class
 racunopg\model\Entitet.class
 racunopg\view\Izbornik$1.class
 racunopg\view\ProzorRacun.class
@@ -39,12 +41,14 @@ racunopg\view\Izbornik$5.class
 racunopg\view\Izbornik.class
 racunopg\view\ProzorRacun$1.class
 racunopg\view\ProzorProizvod$3.class
+racunopg\view\ProzorRacun$8.class
 racunopg\util\HibernateUtil.class
 racunopg\view\ProzorKupac.class
 racunopg\view\ProzorUsluga$2.class
 racunopg\view\ProzorProizvod$2.class
 racunopg\view\ProzorUsluga.class
 racunopg\view\RacunOpgViewSucelje.class
+racunopg\view\ProzorRacun$7.class
 racunopg\controller\ObradaProizvod.class
 racunopg\view\ProzorKupac$1.class
 racunopg\view\Izbornik$4.class

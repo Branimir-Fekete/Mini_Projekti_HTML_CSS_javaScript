@@ -5,6 +5,7 @@
 package racunopg.controller;
 
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 import racunopg.model.Racun;
 import racunopg.util.RacunOpgException;
@@ -25,6 +26,7 @@ public class ObradaRacun extends Obrada<Racun> {
         kontrolaPDV();
         kontrolaVrijemeIzdavanja();
         kontrolaOpisPlacanja();
+        kontrolaVrijemeUnosa();
     }
 
     @Override
@@ -35,6 +37,17 @@ public class ObradaRacun extends Obrada<Racun> {
     @Override
     protected void kontrolaBrisanje() throws RacunOpgException {
 
+    }
+
+    private void kontrolaVrijemeUnosa() throws RacunOpgException {
+
+        if (getEntitet().getVrijemeIzdavanja() == null) {
+            return;
+        }
+
+        if (getEntitet().getVrijemeIzdavanja().compareTo(new Date()) <= 0) {
+            throw new RacunOpgException("Datum i vrijeme moraju biti nakon trenutnog datuma i vremena");
+        }
     }
 
     private void kontrolaPDV() throws RacunOpgException {

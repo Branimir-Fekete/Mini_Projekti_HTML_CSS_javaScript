@@ -94,6 +94,7 @@ public class PocetniInsert {
     
     private void kreirajRacune(){
         Racun r;
+        Faker faker = new Faker();
         
     }
     
