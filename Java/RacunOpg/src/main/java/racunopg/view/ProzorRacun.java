@@ -68,7 +68,7 @@ public class ProzorRacun extends javax.swing.JFrame implements RacunOpgViewSucel
         DecimalFormatSymbols dfs = new DecimalFormatSymbols(Locale.of("hr", "HR"));
         df = new DecimalFormat("###,##0.00", dfs);
 
-        setTitle(Alati.NAZIV_APP + " | PROIZVODI");
+        setTitle(Alati.NAZIV_APP + " | RAČUNI");
 
         ucitajProizvode();
         ucitajUsluge();

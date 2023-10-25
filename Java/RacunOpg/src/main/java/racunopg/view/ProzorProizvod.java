@@ -36,7 +36,7 @@ public class ProzorProizvod extends javax.swing.JFrame implements RacunOpgViewSu
         DecimalFormatSymbols dfs = new DecimalFormatSymbols(Locale.of("hr", "HR"));
         df = new DecimalFormat("###,##0.00", dfs);
 
-        setTitle(Alati.NAZIV_APP + " | SMJEROVI");
+        setTitle(Alati.NAZIV_APP + " | PROIZVODI");
         ucitaj();
     }
 
