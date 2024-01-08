@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>05button</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #222;
+      }
+      a {
+        padding: 40px 80px;
+        font-family: sans-serif;
+        text-decoration: none;
+        color: #fff;
+        font-size: 45px;
+        letter-spacing: 2px;
+        border: 3px solid #fff;
+        position: relative;
+        transition: all 1s;
+        overflow: hidden;
+      }
+      a:before {
+        content: 'YEAH!';
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #f44336;
+        transition: all 1s;
+        transform: translateY(-100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      a:hover:before {
+        transform: translateY(0);
+      }
+      a:hover {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">Hover Me</a>
+  </body>
+</html>
