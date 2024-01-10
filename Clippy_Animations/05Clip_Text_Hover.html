@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>05Clip_Text_Hover</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #c8d6e5;
+      }
+      .main {
+        position: relative;
+        width: 800px;
+      }
+      h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 220px;
+        text-transform: uppercase;
+      }
+      h1:nth-child(2) {
+        color: white;
+        transition: 0.5s;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0% 100%);
+        background-color: #c8d6e5;
+      }
+      h1:nth-child(2):hover {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      }
+      h1:nth-child(1):hover ~ h1 {
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>black</h1>
+      <h1>white</h1>
+    </div>
+  </body>
+</html>

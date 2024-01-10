@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>02Clip_Wave</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #2f2f2f;
+      }
+      .wave {
+        position: relative;
+        width: 500px;
+        height: 500px;
+      }
+      h2 {
+        position: absolute;
+        text-align: center;
+        line-height: 500px;
+        font-size: 170px;
+        text-transform: uppercase;
+      }
+      h2:nth-child(1) {
+        color: transparent;
+        -webkit-text-stroke: 2px #03a9f4;
+      }
+      h2:nth-child(2) {
+        color: #03a9f4;
+        animation: wave 2s ease-in-out infinite;
+      }
+      @keyframes wave {
+        0% {
+          clip-path: polygon(
+            0 100%,
+            0 34%,
+            24% 41%,
+            37% 50%,
+            54% 55%,
+            75% 57%,
+            89% 54%,
+            100% 46%,
+            100% 100%
+          );
+        }
+        50% {
+          clip-path: polygon(
+            0 100%,
+            0 48%,
+            16% 55%,
+            36% 60%,
+            49% 56%,
+            61% 46%,
+            76% 42%,
+            100% 46%,
+            100% 100%
+          );
+        }
+        100% {
+          clip-path: polygon(
+            0 100%,
+            0 34%,
+            24% 41%,
+            37% 50%,
+            54% 55%,
+            75% 57%,
+            89% 54%,
+            100% 46%,
+            100% 100%
+          );
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wave">
+      <h2>wave</h2>
+      <h2>wave</h2>
+    </div>
+  </body>
+</html>

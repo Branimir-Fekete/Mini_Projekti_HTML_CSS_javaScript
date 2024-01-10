@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>04Clip_Paragraph_Hover</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #2f2f2f;
+      }
+      .card {
+        width: 500px;
+        height: 250px;
+        background-color: #c7ecee;
+        padding: 20px 80px 20px 20px;
+        border-radius: 10px;
+        transition: all 0.5s;
+        clip-path: circle(6.1% at 83% 18%);
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 18px;
+      }
+      .card:hover {
+        clip-path: circle(70.7% at 50% 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>information</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut, odio
+        voluptates! Sit minima nulla, ut obcaecati blanditiis sed vel rem fugiat
+        consectetur ab sint exercitationem ullam laudantium aliquid aliquam
+        illum.
+      </p>
+    </div>
+  </body>
+</html>
