@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>10Clip_Text_Animation</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+      section {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+      .box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box2 {
+        background: #4bc979;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+      }
+      h2 {
+        font-size: 45px;
+        display: flex;
+        flex-direction: column;
+        transform: translateY(-70%);
+        text-align: center;
+        animation: animate 3s ease-in-out infinite;
+        color: #4bc979;
+      }
+      .box2 h2 {
+        color: #fff;
+      }
+      span:nth-child(2) {
+        line-height: 1em;
+        font-size: 2em;
+      }
+      @keyframes animate {
+        0%,
+        45% {
+          transform: translateY(-70%);
+        }
+        55%,
+        90% {
+          transform: translateY(70%);
+        }
+        100% {
+          transform: translateY(-70%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="box box1">
+        <h2><span>Bye Bye</span><span>2023</span></h2>
+      </div>
+      <div class="box box2">
+        <h2><span>Happy new year</span><span>2024</span></h2>
+      </div>
+    </section>
+  </body>
+</html>
