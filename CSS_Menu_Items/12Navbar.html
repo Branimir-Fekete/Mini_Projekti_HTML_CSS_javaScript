@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>12Navbar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        background: #252839;
+      }
+      ul {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      li {
+        position: relative;
+        list-style: none;
+      }
+      a {
+        position: relative;
+        font-size: 4em;
+        text-decoration: none;
+        letter-spacing: 2px;
+        line-height: 1em;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+      }
+      a::before {
+        content: attr(data-text);
+        position: absolute;
+        color: #00ade1;
+        border-right: 8px solid #00ade1;
+        -webkit-text-stroke: 1px #00ade1;
+        width: 0%;
+        overflow: hidden;
+        transition: 1s;
+      }
+      a:hover::before {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a
+          href="#"
+          data-text="&nbsp;home"
+          >&nbsp;home&nbsp;&nbsp;</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          data-text="&nbsp;about"
+          >&nbsp;about&nbsp;</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          data-text="&nbsp;services"
+          >&nbsp;services&nbsp;</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          data-text="&nbsp;team"
+          >&nbsp;team&nbsp;</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          data-text="&nbsp;contact"
+          >&nbsp;contact&nbsp;</a
+        >
+      </li>
+    </ul>
+  </body>
+</html>

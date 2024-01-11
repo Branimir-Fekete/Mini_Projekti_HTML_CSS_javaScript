@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>03Navbar</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style-type: none;
+      }
+      ul li a {
+        display: block;
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #262626;
+        text-transform: capitalize;
+        text-decoration: none;
+        position: relative;
+        transition: all 1s;
+        margin: 0 5px;
+      }
+      a:hover {
+        color: white;
+      }
+      ul li span {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        background-color: #262626;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        transform: scaleY(0);
+        transition: all 0.5s;
+        transform-origin: top;
+      }
+      a:hover span {
+        transform: scaleY(1);
+      }
+      span:nth-child(2) {
+        left: 25%;
+        transition-delay: 0.15s;
+      }
+      span:nth-child(3) {
+        left: 50%;
+        transition-delay: 0.3s;
+      }
+      span:nth-child(4) {
+        left: 75%;
+        transition-delay: 0.45s;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <a href="#"
+          >home
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          >about
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          >service
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          >team
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          >contact
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>
