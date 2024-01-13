@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>03Driving_Car</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .background {
+        height: 100vh;
+        background: url(images/bg.jpg);
+        background-position: bottom left;
+        animation: driving 10s linear infinite;
+      }
+      .car {
+        position: absolute;
+        left: 300px;
+        bottom: -50px;
+        width: 200px;
+      }
+      .motorbike {
+        position: absolute;
+        left: 700px;
+        bottom: 55px;
+        width: 150px;
+      }
+
+      @keyframes driving {
+        from {
+          background-position: bottom left;
+        }
+        to {
+          background-position: bottom right;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background">
+      <img
+        class="car"
+        src="images/car.png"
+        alt=""
+      />
+      <img
+        class="motorbike"
+        src="images/motobike.png"
+        alt=""
+      />
+    </div>
+  </body>
+</html>
