@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+
+    <title>13Icon_Hover</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+      }
+      ul li {
+        list-style-type: none;
+        width: 120px;
+        height: 120px;
+        margin: 0 20px;
+        border: 2px solid #0a3d62;
+        border-radius: 50%;
+        transition: all 0.5s;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      ul li i {
+        font-size: 48px;
+        color: #0a3d62;
+        transition: all 0.5s;
+      }
+      ul li::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0a3d62;
+        border-radius: 50%;
+        z-index: -1;
+        transition: all 0.5s;
+        opacity: 0;
+      }
+      ul li:hover::before {
+        opacity: 1;
+        transform: scale(0.8);
+      }
+      ul li:hover i {
+        color: #fff;
+      }
+      ul li::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 50%;
+        z-index: -1;
+        transition: all 0.5s;
+        opacity: 0;
+        border: 2px dashed #2e86de;
+        box-sizing: border-box;
+      }
+      @keyframes rotating {
+        0% {
+          transform: scale(0.92) rotate(0deg);
+        }
+        100% {
+          transform: scale(0.92) rotate(360deg);
+        }
+      }
+      li:hover::after {
+        opacity: 1;
+        animation: rotating 10s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <i class="fas fa-heart"></i>
+      </li>
+      <li>
+        <i class="fas fa-glass-martini"></i>
+      </li>
+      <li>
+        <i class="fas fa-globe"></i>
+      </li>
+      <li>
+        <i class="fas fa-gift"></i>
+      </li>
+    </ul>
+  </body>
+</html>

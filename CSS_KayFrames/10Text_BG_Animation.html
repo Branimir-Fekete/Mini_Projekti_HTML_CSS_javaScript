@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>10Text_BG_Animation</title>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #273c75;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        font-size: 200px;
+        text-align: center;
+        text-transform: uppercase;
+        background: url(images/image.jpg);
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: textBG 20s linear infinite;
+      }
+
+      @keyframes textBG {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 100% 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>css animation</h1>
+  </body>
+</html>
