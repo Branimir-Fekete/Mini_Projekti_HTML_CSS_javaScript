@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+
+    <title>15Puls_efect</title>
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: sans-serif;
+        background: #222;
+      }
+      .pulse {
+        width: 100px;
+        height: 100px;
+        background-color: #58ea00;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+        font-size: 48px;
+        position: relative;
+      }
+      .pulse::before,
+      .pulse::after {
+        content: '';
+        position: absolute;
+        left: -20px;
+        top: -20px;
+        right: -20px;
+        bottom: -20px;
+        border: 1px solid #58ea00;
+        border-radius: 50%;
+        animation: pulsing 1.5s linear infinite;
+      }
+      .pulse::after {
+        animation-delay: 0.5s;
+      }
+
+      @keyframes pulsing {
+        0% {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1.2);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pulse">
+      <i class="fas fa-phone"></i>
+    </div>
+  </body>
+</html>
