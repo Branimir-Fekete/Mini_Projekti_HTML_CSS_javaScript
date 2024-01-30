@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>33Fancy_Border_Loading</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: sans-serif;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #111;
+      }
+      .loader {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .loader span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        animation: rotate 5s linear infinite;
+      }
+      .loader span:nth-child(1) {
+        border-radius: 49% 51% 70% 30% / 38% 30% 70% 62%;
+      }
+      .loader span:nth-child(2) {
+        border-radius: 71% 29% 36% 64% / 57% 62% 38% 43%;
+        animation-direction: reverse;
+      }
+      .loader span:nth-child(3) {
+        border-radius: 48% 52% 52% 48% / 70% 51% 49% 30%;
+        animation-duration: 3s;
+      }
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      h2 {
+        color: #fff;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <h2>loading...</h2>
+    </div>
+  </body>
+</html>
