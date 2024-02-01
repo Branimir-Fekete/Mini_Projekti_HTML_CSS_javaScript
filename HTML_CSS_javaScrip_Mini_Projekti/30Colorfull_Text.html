@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>30Colorfull_Text</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #252839;
+      }
+      h2 {
+        position: relative;
+        font-size: 3em;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: #fff2;
+      }
+
+      @keyframes animateText {
+        0%,
+        20% {
+          color: #fff2;
+        }
+        21%,
+        79% {
+          color: #0f0;
+        }
+        80%,
+        100% {
+          color: #fff2;
+        }
+      }
+      h2 span {
+        position: relative;
+        animation: animateText 1s linear infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="text">colorfull text</h2>
+
+    <script>
+      let text = document.querySelector('.text');
+      let htmlSpans = text.innerText
+        .split('')
+        .map((letter, i) => {
+          return `<span style="animation-duration:${Math.random() * 5}s;
+                        filter:hue-rotate(${i * 50}deg)
+                    "
+          >${letter}</span>`;
+        })
+        .join('');
+      text.innerHTML = htmlSpans;
+
+      console.log(htmlSpans);
+    </script>
+  </body>
+</html>
