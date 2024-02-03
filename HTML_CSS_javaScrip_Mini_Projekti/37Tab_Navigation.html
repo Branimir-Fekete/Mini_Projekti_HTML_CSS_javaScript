@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>37Tab_Navigation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #20415c;
+      }
+      .navigation {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .toggle {
+        position: relative;
+        width: 75px;
+        height: 75px;
+        background: #ff4886;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        transform: translateY(-30px);
+        z-index: 10;
+        border: 10px solid #20415c;
+      }
+      .toggle::before {
+        content: '+';
+        position: absolute;
+        font-size: 3em;
+        color: #fff;
+        transition: 1.5s;
+      }
+      .toggle.active::before {
+        transform: rotate(225deg);
+      }
+      .menu {
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        position: absolute;
+        border-radius: 70px;
+        transform: translateY(-30px);
+        transition: transform 0.5s, width 0.5s, height 0.5s;
+        transition-delay: 1s, 0.5s, 0.5s;
+      }
+      .toggle.active ~ .menu {
+        width: 360px;
+        height: 70px;
+        transform: translateY(0px);
+        transition-delay: 0s, 0.5s, 0.5s;
+      }
+      .menu ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        line-height: 80px;
+      }
+      .menu ul li {
+        list-style: none;
+        cursor: pointer;
+        transform: translateY(-30px);
+        transition: 0.25s;
+        opacity: 0;
+        transition-delay: var(--i);
+      }
+      .toggle.active ~ .menu ul li {
+        opacity: 1;
+        transform: translateY(0px);
+        transition-delay: calc(0.75s + var(--i));
+      }
+      .menu ul li:nth-child(3) {
+        width: 30px;
+      }
+      .menu ul li a {
+        display: block;
+        font-size: 1.7em;
+        text-decoration: none;
+        color: #555;
+      }
+      .menu li:hover a {
+        color: #ff4886;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navigation">
+      <div class="toggle"></div>
+      <div class="menu">
+        <ul>
+          <li style="--i: 0.1s">
+            <a href="#"><ion-icon name="home-outline"></ion-icon></a>
+          </li>
+          <li style="--i: 0.2s">
+            <a href="#"><ion-icon name="people-outline"></ion-icon></a>
+          </li>
+          <li style="--i: 0.1s"></li>
+          <li style="--i: 0.4s">
+            <a href="#"><ion-icon name="heart-outline"></ion-icon></a>
+          </li>
+          <li style="--i: 0.1s">
+            <a href="#"><ion-icon name="notifications-outline"></ion-icon></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script>
+      let toggle = document.querySelector('.toggle');
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>40Split_Screen_On_Scrool</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        min-height: 200vh;
+      }
+      section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 100;
+        pointer-events: none;
+      }
+      .side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(images/img000001.jpg);
+        background-size: cover;
+      }
+      .side1 {
+        clip-path: polygon(
+          0% 0%,
+          68% 0%,
+          33% 15%,
+          68% 24%,
+          35% 36%,
+          68% 44%,
+          35% 54%,
+          68% 64%,
+          36% 74%,
+          68% 85%,
+          36% 89%,
+          69% 100%,
+          0 100%
+        );
+      }
+
+      .side2 {
+        clip-path: polygon(
+          100% 0,
+          68% 0%,
+          33% 15%,
+          68% 24%,
+          35% 36%,
+          68% 44%,
+          35% 54%,
+          68% 64%,
+          36% 74%,
+          68% 85%,
+          36% 89%,
+          69% 100%,
+          100% 100%
+        );
+      }
+      .content {
+        background: #000;
+        color: #fff;
+        padding: 100px;
+        padding-top: 100vh;
+      }
+      .content h2 {
+        position: relative;
+        font-size: 4em;
+      }
+      .content p {
+        position: relative;
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="side side1"></div>
+      <div class="side side2"></div>
+    </section>
+
+    <div class="content">
+      <h2>split screen on page scroll</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, dicta
+        tempore distinctio doloremque itaque non rerum, deserunt, ad dolorum
+        maiores temporibus nemo? Cumque, quisquam quae! Quae harum, omnis
+        inventore ad suscipit nostrum autem. Dolorum, aliquam nemo vel earum
+        deserunt quod a. Magnam similique consequatur reiciendis tenetur quia
+        dolor veniam in ratione, id rem eveniet ex sed amet quo quam expedita
+        minus iste. Minus pariatur deleniti eveniet voluptatum similique
+        assumenda quo officiis fugit voluptas autem, odit blanditiis corporis
+        accusantium nobis omnis nisi ex veniam alias sapiente. Minus non,
+        eligendi id deserunt libero voluptatum minima enim sed nisi officia est
+        labore. Dolorem non inventore provident reiciendis! Eos, officiis sequi?
+        Porro laboriosam iure cupiditate sunt possimus, recusandae dolor ab sint
+        nisi quibusdam accusantium voluptate libero voluptatem, reiciendis eum
+        totam fugiat asperiores doloribus consequuntur repellendus maiores
+        quidem. Molestiae doloribus quasi reprehenderit, et, est iste tempore
+        laudantium corrupti alias dolor beatae impedit magni esse ipsum. Illo,
+        ab saepe, voluptates ad deserunt eveniet adipisci iusto impedit aperiam
+        ullam eligendi eum. Quod, ut necessitatibus. Perferendis, voluptate!
+        Amet laudantium aliquam nisi perferendis, temporibus magnam ipsa eius
+        voluptatibus nulla repudiandae ad eaque omnis pariatur modi dolores
+        facere nemo et quisquam, dicta cumque enim ipsum. Suscipit, possimus ex
+        accusamus consectetur, numquam eligendi nihil nisi inventore culpa qui
+        dolores impedit maiores maxime aliquid enim in. Porro accusantium
+        temporibus accusamus quam, totam aperiam amet ipsam maxime id sed?
+        Delectus odit, dolorem eligendi omnis earum voluptatum, adipisci error,
+        at quis accusantium repudiandae amet dolore eum facilis perferendis
+        aperiam cum autem quidem. Soluta esse dolores maxime aliquam, nostrum
+        rem excepturi perspiciatis suscipit consectetur quidem perferendis vero
+        tenetur ab voluptatum consequatur tempore est quos, numquam veniam
+        obcaecati reiciendis reprehenderit nulla dignissimos cumque. Tenetur,
+        doloremque laborum? Iusto, cupiditate fugiat eligendi harum sequi
+        obcaecati porro perspiciatis ex saepe enim dolorem ad voluptatem
+        quaerat, sit voluptas facilis facere labore ratione amet corrupti magnam
+        nihil totam quisquam. Neque ex blanditiis perferendis quia saepe vero
+        cum, eaque sed! Ipsum rem ipsam eaque. Reprehenderit doloremque nobis
+        sunt accusantium perspiciatis? Totam, reprehenderit itaque soluta
+        numquam eaque, sequi esse quo minus quae consequatur optio molestias
+        aliquid. Quisquam, mollitia reprehenderit quasi commodi at excepturi
+        inventore harum natus cupiditate incidunt quas expedita deserunt fugiat
+        dolore, maxime numquam illum iusto earum, quibusdam minus dolor.
+        Explicabo perferendis accusantium, voluptates suscipit doloribus minima!
+        Veniam illo a nisi eveniet alias facere quos dolorem rerum porro impedit
+        delectus nobis ipsam eum voluptas unde numquam perferendis aut incidunt
+        nesciunt, quam asperiores error? Quam natus aut, suscipit neque velit
+        illum itaque excepturi quae, ut voluptas a iste, alias dicta reiciendis
+        pariatur obcaecati cum veritatis? Quam aspernatur quos perferendis
+        suscipit dignissimos obcaecati molestiae sit enim corporis ratione
+        pariatur, quidem aliquam eaque sequi adipisci consequatur molestias
+        veritatis quod, quisquam praesentium magni facilis beatae nulla
+        excepturi. Inventore voluptatibus obcaecati deserunt laboriosam, rerum
+        fugit eum, ratione quos reprehenderit temporibus hic omnis. Natus,
+        corrupti autem temporibus fuga quia explicabo facilis quas perferendis
+        ipsum ipsam quos non architecto velit eos similique itaque. Rem,
+        quisquam ipsa magni saepe tempore temporibus odio laudantium laboriosam
+        eveniet deserunt enim distinctio consectetur blanditiis?
+      </p>
+    </div>
+
+    <script>
+      let side1 = document.querySelector('.side1');
+      let side2 = document.querySelector('.side2');
+
+      window.addEventListener('scroll', () => {
+        side1.style.left = -window.scrollY + 'px';
+        side2.style.left = window.scrollY + 'px';
+      });
+    </script>
+  </body>
+</html>

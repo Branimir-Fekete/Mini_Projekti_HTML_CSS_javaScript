@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>39Glitch_Effect</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        position: absolute;
+        background: url(images/img000001.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      .container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: url(images/img000001.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+
+    <script>
+      let container = document.querySelector('.container');
+      for (let i = 0; i < 20; i++) {
+        let glitchBox = document.createElement('div');
+        glitchBox.classList.add('box');
+        container.appendChild(glitchBox);
+      }
+
+      setInterval(() => {
+        let glitches = document.querySelectorAll('.box');
+        glitches.forEach((glitch) => {
+          glitch.style.left = Math.random() * 100 + 'vw';
+          glitch.style.top = Math.random() * 100 + 'vw';
+          glitch.style.height = Math.random() * 100 + 'px';
+          glitch.style.width = Math.random() * 400 + 'px';
+          glitch.style.backgroundPosition = Math.random() * 50 + 'px';
+        });
+      }, 300);
+    </script>
+  </body>
+</html>
